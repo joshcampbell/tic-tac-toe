@@ -1,0 +1,14 @@
+#!/bin/bash
+set -e
+
+# Install script for ubuntu
+
+sudo apt-get install -y ansible cowsay python-dev python-pip
+
+# invoke the ansible playbook
+# (stdbuf -o0 is to force tee to display output to the screen in real time)
+ANSIBLE_COW_SELECTION=flaming-sheep stdbuf -o0 sudo ansible-playbook -vvvv \
+                                               ./ansible.yml \
+                                               -c local \
+                                               -i localhost, \
+                                               | tee ./tmp/ansible.log

@@ -1,0 +1,12 @@
+{
+  "players":[
+    {
+      "symbol": "X",
+      "name": "Alice"
+    },
+    {
+      "symbol": "O",
+      "name": "Bob"
+    }
+  ]
+}

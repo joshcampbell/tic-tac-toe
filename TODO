@@ -1,0 +1,34 @@
+# Second Submission
+
+- Code coverage tool / expanded test coverage
+- AI Performance
+
+# Probably Never
+
+- Stop crashing on window resize
+  - Running a pad rather than a screen through all of those methods I wrote
+    would be a great example of liskoff substitution in action.
+- Put either AI or UI into a separate thread
+- Test Ansible installer on OSX
+
+# DONE
+
+- Add sound (probably requires multithreading?)
+  - try espeak, maybe pyglet? (went with espeak)
+- Handle game overs more gracefully:
+  - Allow taking back final move
+  - Keep playing until the player decides to quit.
+- Improve error handling / state validation
+  - each class should offer exception-throwing and boolean-based 
+    validation methods.
+  - Stop crashing on failed moves
+- Prompt for player and computer names
+  - cheated and am using a json config file for now
+- Last Minute Renderer Fixes
+  - Show player move immediately
+  - Do not attempt AI move after player victory
+- Curses Renderer Refactor
+  - Break it into modules, at least
+    - screen manipulation
+    - game logic
+    - voice

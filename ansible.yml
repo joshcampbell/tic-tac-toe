@@ -1,0 +1,16 @@
+---
+- hosts: all
+  tasks:
+    
+    - name: install python
+      apt: name={{ item }} state=installed
+      with_items:
+        - python
+        - python-pip
+        - python-dev
+        - python-pygame
+        - ipython
+
+    - name: install dependencies via pip
+      pip: name={{ item }} state=present
+      with_items: [subprocess32, coverage]
